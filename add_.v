@@ -1,0 +1,28 @@
+module add_( // @[add.v:1.1-25.10]
+  output [7:0] hi_, // @[add.v:9.23-9.25]
+  output [7:0] h_, // @[add.v:8.23-8.24]
+  output [7:0] g_, // @[add.v:7.23-7.24]
+  output [7:0] f_, // @[add.v:6.23-6.24]
+  output [7:0] ei_, // @[add.v:5.16-5.18]
+  output [7:0] e_, // @[add.v:4.16-4.17]
+  output [7:0] d_, // @[add.v:3.16-3.17]
+  output [7:0] c_, // @[add.v:2.16-2.17]
+  input  [7:0] b_, // @[add.v:1.39-1.40]
+  input  [7:0] a_ // @[add.v:1.24-1.25]
+);
+  wire [8:0] _GEN_3 = $signed(a_) + $signed(b_); // @[add.v:22 add.v:22]
+  wire [7:0] _GEN_4 = _GEN_3[7:0]; // @[add.v:22 add.v:22]
+  wire [8:0] _GEN_7 = $signed(_GEN_4) - $signed(a_); // @[add.v:22 add.v:22]
+  wire [8:0] _GEN_11 = $signed(a_) - $signed(b_); // @[add.v:21 add.v:21]
+  wire [8:0] _GEN_16 = a_ + b_; // @[add.v:14 add.v:14]
+  wire [8:0] _GEN_17 = _GEN_16[7:0] - a_; // @[add.v:14 add.v:14]
+  wire [8:0] _GEN_18 = a_ - b_; // @[add.v:13 add.v:13]
+  assign hi_ = 8'h0;
+  assign h_ = _GEN_7[7:0]; // @[add.v:22 add.v:22]
+  assign g_ = _GEN_11[7:0]; // @[add.v:21 add.v:21]
+  assign f_ = _GEN_3[7:0]; // @[add.v:20 add.v:20]
+  assign ei_ = 8'h0;
+  assign e_ = _GEN_17[7:0]; // @[add.v:14 add.v:14]
+  assign d_ = _GEN_18[7:0]; // @[add.v:13 add.v:13]
+  assign c_ = _GEN_16[7:0]; // @[add.v:12 add.v:12]
+endmodule
